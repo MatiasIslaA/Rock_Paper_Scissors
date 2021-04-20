@@ -33,19 +33,15 @@ function selections(player, robot) {
     }
 }
 
-let randomNumber = function getRandomNumber(min, max) {
+function randomNumber(min, max) {
     min  = Math.ceil(min);
     max = Math.floor(max);
-    return Math.random() * (max - min) + min;
+    return Math.round(Math.random() * (max - min) + min);
 }
-let threeRandomNumbers = Math.round(randomNumber(1, 3));
-let threeRandomNumbers2 = Math.round(randomNumber(1, 3));
-let threeRandomNumbers3 = Math.round(randomNumber(1, 3));
-let threeRandomNumbers4 = Math.round(randomNumber(1, 3));
-let threeRandomNumbers5 = Math.round(randomNumber(1, 3));
+
 
 // function that converts the random number into a string
-let gameon = function computerOptions(number) {
+function gameon(number) {
      let result;
      if (number == 3) {
         result = "paper";
@@ -59,24 +55,8 @@ let gameon = function computerOptions(number) {
     }
     return result;
 }
-// comparation 
+// Function that shows game results 
 
-let playerSelection = prompt("Rock, paper or scissors?").toLowerCase();
-let gameone = selections(playerSelection, gameon(threeRandomNumbers));
-console.log(gameone)
-let playerSelection2 = prompt("Rock, paper or scissors?").toLowerCase();
-gametwo = selections(playerSelection2, gameon(threeRandomNumbers2));
-console.log(gametwo);
-let playerSelection3 = prompt("Rock, paper or scissors?").toLowerCase();
-gamethree = selections(playerSelection3, gameon(threeRandomNumbers3))
-console.log(gamethree);
-let playerSelection4 = prompt("Rock, paper or scissors?").toLowerCase();
-gamefour = selections(playerSelection4, gameon(threeRandomNumbers4));
-console.log(gamefour);
-let playerSelection5 = prompt("Rock, paper or scissors?").toLowerCase();
-gamefour = selections(playerSelection5, gameon(threeRandomNumbers5));
-console.log(gamefour);
-console.log(userScore + " " + computerScore)
 let winner = function cor(a, b) {
     if (a > b) {
         return "You're the winner!";
@@ -85,6 +65,15 @@ let winner = function cor(a, b) {
     } else {
         return "The computer has won!";
     }
+}
+
+// Loop of the game
+let computerNumber = (Math.round(randomNumber(1, 3)))
+for (i=0; i <5; i++) {
+    let playerSelection = prompt("Rock, paper or scissors?").toLowerCase();
+    console.log(selections(playerSelection, gameon(computerNumber)));
+    console.log(userScore + " " + computerScore);
+    computerNumber = randomNumber(1, 3);
 }
 
 console.log(winner(userScore, computerScore));
