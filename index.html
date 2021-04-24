@@ -5,9 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="rock_paper_scissors.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="container">
+        <div class="canvas"></div>
+        <div class="protagonist"></div>
+        <div class="enemy"></div>
+        <div class="attack">Click the enemy</div>
+        <div class="popup">So you want to fight me?</div>
+
+    </div>
+    <div class="damage-protagonist">-1</div>
+    <div class="damage-enemy">-1</div>
+    <div class="weapons">
+        <div class="title">Choose your weapon!</div>
+        <div class="weapon-list">
+            <div class="rock">Rock</div>
+            <div class="paper">Paper</div>
+            <div class="scissors">Scissors</div>
+        </div>
+    </div>
+    <div class="game-results">
+        <p id="p1"></p>
+        <p id="p2"></p>
+    </div>
+
     
+
+ <script src="rock_paper_scissors.js"></script>
+
 </body>
 </html>

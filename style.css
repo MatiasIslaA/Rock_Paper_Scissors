@@ -1,0 +1,111 @@
+*  
+    { 
+    margin: 0; 
+    padding: 0; 
+    border: 0; 
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+}
+body {
+    background-color: #0C1121;
+}
+.container {
+    position: relative;
+}
+.canvas {
+    width: 100%;
+    height: 500px;
+    background-image: url(images/background.png);
+    background-repeat: repeat-x;
+}
+.protagonist {
+    background-image: url(images/protagonist.png);
+    height: 47px;
+    width:38px;
+    position: absolute;
+    margin-left: 120px;
+    bottom: 70px;
+    transition: 0.2s;
+}
+.enemy {
+    background-image: url(images/enemy.png);
+    height: 47px;
+    width:38px;
+    position: absolute;
+    margin-left: 1000px;
+    bottom: 70px;
+    cursor: pointer;
+}
+
+.popup {
+    position: absolute;
+    margin-left: 1000px;
+    bottom: 130px;
+    width: 120px;
+    font-size: 14px;
+    background-color: white;
+    opacity: 0;
+}
+
+.attack {
+    position: absolute;
+    margin-left: 800px;
+    bottom: 40px;
+    background-color: white;
+    visibility: hidden;
+}
+.damage-protagonist {
+    position:relative;
+    margin-left: 920px;
+    bottom: 120px;
+    color: rgb(231, 69, 69);
+    font-size: 20px;
+    opacity: 0;
+    pointer-events: none;
+
+}
+.damage-protagonist.show {
+    animation: anime 1s 1;
+}
+.damage-enemy {
+    position:relative;
+    margin-left: 990px;
+    bottom: 140px;
+    color: rgb(231, 69, 69);
+    font-size: 20px;
+    opacity: 0;
+    pointer-events: none;
+
+}
+.damage-enemy.show {
+    animation: anime 1s 1;
+}
+@keyframes anime {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+.weapons {
+    display: grid;
+    place-items: center;
+    opacity: 0;
+    background-color: white;
+
+}
+.weapon-list {
+    padding: 10px;
+    background-color: white;
+}
+.game-results {
+    position:absolute;
+    margin-left: 990px;
+    bottom: 50px;
+    background-color: white;
+
+}
