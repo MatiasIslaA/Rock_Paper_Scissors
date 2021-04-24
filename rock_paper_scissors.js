@@ -180,6 +180,9 @@ paper.addEventListener('click', () => {
     document.getElementById("p2").innerHTML = userScore + ' ' + computerScore;
     if(userScore ==5) {
         document.querySelector(".weapons").innerHTML = "You have won the game!";
+        document.querySelector(".weapons").innerHTML = " ";
+        document.querySelector(".weapons").innerHTML = " ";
+
     } else if(computerScore ==5) 
         document.querySelector(".weapons").innerHTML = "You have lost the game!";
 })

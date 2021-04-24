@@ -9,6 +9,36 @@
 body {
     background-color: #0C1121;
 }
+.webpage-title {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: 100px;
+    width: 592px;
+    height: 106px;
+    font-size: 48px;
+    line-height: 48px;
+    text-align: center;
+    letter-spacing: -0.08em;
+    text-shadow: 2px 5px #18402A;
+    color: #FFFFFF;
+}
+.subtitle {
+    position: absolute;
+    top: 23%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: 100px;
+    width: 592px;
+    height: 106px;
+    font-size: 18px;
+    line-height: 48px;
+    text-align: center;
+    letter-spacing: -0.08em;
+    text-shadow: 2px 5px #18402A;
+    color: #FFFFFF;
+}
 .container {
     position: relative;
 }
@@ -36,7 +66,6 @@ body {
     bottom: 70px;
     cursor: pointer;
 }
-
 .popup {
     position: absolute;
     margin-left: 1000px;
@@ -45,6 +74,10 @@ body {
     font-size: 14px;
     background-color: white;
     opacity: 0;
+    padding: 10px;
+    border-radius: 8px; 
+    border: solid 2px;
+    border-color: #0C1121;
 }
 
 .attack {
@@ -54,7 +87,10 @@ body {
     background-color: white;
     visibility: hidden;
 }
-.damage-protagonist {
+.title {
+    cursor: default;
+}
+.damage-enemy {
     position:relative;
     margin-left: 920px;
     bottom: 120px;
@@ -64,10 +100,10 @@ body {
     pointer-events: none;
 
 }
-.damage-protagonist.show {
+.damage-enemy.show {
     animation: anime 1s 1;
 }
-.damage-enemy {
+.damage-protagonist {
     position:relative;
     margin-left: 990px;
     bottom: 140px;
@@ -77,7 +113,7 @@ body {
     pointer-events: none;
 
 }
-.damage-enemy.show {
+.damage-protagonist.show {
     animation: anime 1s 1;
 }
 @keyframes anime {
@@ -96,16 +132,55 @@ body {
     place-items: center;
     opacity: 0;
     background-color: white;
-
+    cursor: default;
+}
+.weapons::selection { 
+    background: transparent; 
+} 
+.weapons::-moz-selection { 
+    background: transparent; 
 }
 .weapon-list {
     padding: 10px;
     background-color: white;
+}
+.rock:hover {
+    background-color: gray;
+    cursor: pointer;
+}
+.rock::selection { 
+    background: transparent; 
+} 
+.rock::-moz-selection { 
+    background: transparent; 
+}
+.paper:hover {
+    background-color: gray;
+    cursor: pointer;
+}
+.paper::selection { 
+    background: transparent; 
+} 
+.paper::-moz-selection { 
+    background: transparent; 
+}
+.scissors:hover {
+    background-color: gray;
+    cursor: pointer;
+}
+.scissors::selection { 
+    background: transparent; 
+} 
+.scissors::-moz-selection { 
+    background: transparent; 
 }
 .game-results {
     position:absolute;
     margin-left: 990px;
     bottom: 50px;
     background-color: white;
+}
+#p2 {
+    color: rgb(231, 69, 69);
 
 }
